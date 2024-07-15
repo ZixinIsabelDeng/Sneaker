@@ -1,7 +1,7 @@
 # Contributor: 
 - Camila (Front-end design for login/logout/signin.html and css)
 - Zhihao (bugfixing: make sure js sending the data to backend)
-- Xu Ke: adding routers for post methods of signin/signout/login/valid
+- Xu Ke: adding routers for post methods of signin/signout/login/valid, add database and setup config
 - Zixin : adding the rest of the routers, reorgnize file structure and adding js for logical display
 
 # Sneaker E-commerce Website Description

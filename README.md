@@ -44,7 +44,7 @@ This document provides an overview of the available API endpoints for managing u
 
 ### Create an Account
 - **Method**: POST
-- **URL**: `/user/regUser`
+- **URL**: `/user/signup`
 - **Description**: Creates a new user account. Validates the username and password format, checks if the username already exists, and then writes the new user to the database.
 ### Log in 
 - **Method**: POST

@@ -17,21 +17,21 @@ This document provides an overview of the available API endpoints for managing u
 ## Endpoints
 
 ### Serve the Index Page
-**Method**: GET  
-**URL**: `/`  
-**Description**: Serves the main index.html file of the application.  
+- **Method**: GET  
+- **URL**: `/`  
+- **Description**: Serves the main index.html file of the application.  
 
 ### Render Sign In Page
-**Method**: GET  
-**URL**: `/user/signin`  
-**Description**: Serves the sign-in page for users.  
+- **Method**: GET  
+- **URL**: `/user/signin`  
+- **Description**: Serves the sign-in page for users.  
 
 
 
 ### Render Sign Up Page
-**Method**: GET  
-**URL**: `/user/signup`  
-**Description**: Serves the sign-up page for new users.  
+- **Method**: GET  
+- **URL**: `/user/signup`  
+- **Description**: Serves the sign-up page for new users.  
 
 
 ### Create an Account
@@ -73,9 +73,9 @@ No request body is needed for this endpoint.
       ```
 
 ### Render Error Page
-**Method**: GET  
-**URL**: `/error`  
-**Description**: Serves the error page when an error occurs.  
+- **Method**: GET  
+- **URL**: `/error`  
+- **Description**: Serves the error page when an error occurs.  
 
 
 

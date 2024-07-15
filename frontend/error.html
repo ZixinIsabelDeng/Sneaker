@@ -18,9 +18,33 @@
     <div id="form-div">
         <h2>Error</h2>
         <p>An error occurred. Please try again.</p>
-        <p><a href="/">Back to Home</a></p>
+        <p><a href="/" id="backToHome">Back to Home</a></p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Clear session storage when the error page is loaded
+            sessionStorage.clear();
+
+            const mainPageLink = document.getElementById('mainPage');
+            const backToHomeLink = document.getElementById('backToHome');
+            
+            mainPageLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                // Add your custom behavior here
+                console.log('Main Page link clicked');
+                window.location.href = mainPageLink.getAttribute('href');
+            });
+
+            backToHomeLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                // Clear session storage when back to home is clicked
+                sessionStorage.clear();
+                console.log('Back to Home link clicked, session cleared');
+                window.location.href = backToHomeLink.getAttribute('href');
+            });
+        });
+    </script>
 </body>
 </html>

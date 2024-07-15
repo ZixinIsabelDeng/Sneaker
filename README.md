@@ -20,37 +20,30 @@ This document provides an overview of the available API endpoints for managing u
 **Method**: GET  
 **URL**: `/`  
 **Description**: Serves the main index.html file of the application.  
-**Request**: No request body is needed for this endpoint.  
-**Response**:  
-- **Status Code**: 200 OK  
-- **Response Body**: The content of the `index.html` file.
 
 ### Render Sign In Page
 **Method**: GET  
 **URL**: `/user/signin`  
 **Description**: Serves the sign-in page for users.  
-**Request**: No request body is needed for this endpoint.  
-**Response**:  
-- **Status Code**: 200 OK  
-- **Response Body**: The content of the `signin.html` file.
+
+
 
 ### Render Sign Up Page
 **Method**: GET  
 **URL**: `/user/signup`  
 **Description**: Serves the sign-up page for new users.  
-**Request**: No request body is needed for this endpoint.  
-**Response**:  
-- **Status Code**: 200 OK  
-- **Response Body**: The content of the `signup.html` file.
+
 
 ### Create an Account
 - **Method**: POST
 - **URL**: `/user/signup`
 - **Description**: Creates a new user account. Validates the username and password format, checks if the username already exists, and then writes the new user to the database.
+
 ### Log in 
 - **Method**: POST
 - **URL**: `/user/login`
 - **Description**: Logs a user into their account. Validates the username and password format, checks credentials, and creates a session if the login is successful.
+
 ### Log out
 - **Method**: GET
 - **URL**: `/user/logout`
@@ -83,10 +76,6 @@ No request body is needed for this endpoint.
 **Method**: GET  
 **URL**: `/error`  
 **Description**: Serves the error page when an error occurs.  
-**Request**: No request body is needed for this endpoint.  
-**Response**:  
-- **Status Code**: 200 OK  
-- **Response Body**: The content of the `error.html` file.
 
 
 

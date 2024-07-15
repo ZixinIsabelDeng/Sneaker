@@ -1,31 +1,31 @@
 // Import necessary modules
 const express = require('express');
 const session = require('express-session');
-
-// Define const
-const PORT = 3005;
+const path = require('path');
+const rootRouter = require('./router/rootRouter');
 
 // Create express app
 const app = express();
+const PORT = 3005;
 
-// TODO: Middlewares
-// Handle session
-app.use(session({
-   secret: 'group seven',
-   resave: false,
-   saveUninitialized: false,
-}));
+// Serve static files from the frontend folder
+app.use(express.static(path.resolve(__dirname, '../frontend')));
 
 // Parse json
 app.use(express.json());
 
 // Parse url-encoded
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
-// Use root route
-app.use('/', (req, res) => {
-   res.send('Welcome to the SNEAKER e-commerce server!');
-});
+// Handle session
+app.use(session({
+   secret: 'GROUP SEVEN, A PLUS',
+   resave: false,
+   saveUninitialized: false,
+}));
+
+// Use root router
+app.use('/', rootRouter);
 
 // Register port
 app.listen(PORT, () => {

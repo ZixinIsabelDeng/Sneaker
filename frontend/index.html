@@ -7,7 +7,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Nike Store</title>
 </head>
 
@@ -15,7 +15,8 @@
     <nav id="nav">
         <div class="navTop">
             <div class="navItem">
-                <img src="img/sneakers.png" alt="">
+                <a href="index.html"><img src="img/sneakers.png" alt=""></a>
+                <!-- <img src="img/sneakers.png" alt=""> -->
             </div>
             <div class="navItem">
                 <div class="search">
@@ -23,8 +24,17 @@
                     <img src="img/search.png" width="20" height="20" alt="" class="searchIcon">
                 </div>
             </div>
+            <div id="greeting">
+                <!-- Placeholder for user greeting -->
+            </div>
             <div class="navItem">
                 <span class="limitedOffer">Limited Offer!</span>
+                <div id="signin">
+                    <a href="user/signin">Sign In</a>
+                </div>
+                <div id="logout">
+                  <button class="logoutButtom"> Log Out</button>  
+                </div>
             </div>
         </div>
         <div class="navBottom">
@@ -241,6 +251,51 @@
         </div>
     </footer>
     <script src="app.js"></script>
+    <script>
+    
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = sessionStorage.getItem('username');
+            if (username) {
+                document.getElementById('greeting').innerHTML = `Hello, ${username}!`;
+                document.getElementById('signin').style.display = 'none';
+            }
+            else document.getElementById('logout').style.display='none';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const logoutButton = document.getElementById('logout');
+
+        if (logoutButton) {
+            logoutButton.addEventListener('click', function() {
+                // Send a logout request
+                fetch('/user/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        document.getElementById('greeting').style.display='none';
+                        document.getElementById('signin').style.display = 'block';
+                        document.getElementById('logout').style.display='none';
+                        // Handle successful logout, e.g., redirect to login page
+                       // window.location.href = 'index.html';
+                    } else {
+                        // Handle logout failure
+                        alert('Logout failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        }
+    });
+        
+
+    </script>
 </body>
 
 </html>

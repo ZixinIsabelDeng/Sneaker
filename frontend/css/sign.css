@@ -1,0 +1,48 @@
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#mainPage {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+#form-div {
+    width: 400px;
+    margin: auto;
+    padding: 0.4em 1em 1.5em 1em;
+    border: 1px solid rgb(183, 183, 183);
+    border-radius: 10px;
+}
+
+h2 {
+    margin: 0.7rem 0;
+}
+
+input {
+    margin-bottom: 1.2em;
+}
+
+.btn {
+    background-color: #369e62;
+    color: white;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+#noAcc {
+    color: rgb(50, 138, 233);
+}

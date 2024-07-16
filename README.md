@@ -1,8 +1,12 @@
 # Contributor: 
 - Camila (Front-end design for login/logout/signin.html and css)
-- Zhihao (bugfixing: make sure js sending the data to backend)
+- Zhihao (bugfixing: make sure js sending the data to backend for login/signin page)
 - Xu Ke: adding routers for post methods of signin/signout/login/valid, adding database, documentation and setup config
 - Zixin : adding the rest of the routers, error.html, reorgnize file structure, documentation and adding js for logical display
+
+# For Development:
+- please fork this repository and create your own branch.
+- (Optional)After devopment and testing, you can create a Pull Request to the original repo(this repo) with reviewer of our team members
 
 # Sneaker E-commerce Website Description
 - For COMP354 project , expand backend and new features.

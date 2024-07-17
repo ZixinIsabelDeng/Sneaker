@@ -1,4 +1,5 @@
 const express = require('express');
+const serverless = require('serverless-http');
 const path = require('path');
 const userController = require('../controller/userController');
 
@@ -40,4 +41,6 @@ router.get('/error', (req, res) => {
     res.sendFile(errorPagePath);
 });
 
-module.exports = router;
+app.use('/api', router); // Mount the router on the /api path
+
+module.exports.handler = serverless(app);

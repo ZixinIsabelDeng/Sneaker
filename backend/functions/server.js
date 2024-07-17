@@ -27,7 +27,7 @@ app.use(
 );
 
 // Use root router
-app.use("/.netlify/functions/server", rootRouter); // Prefix path for Netlify Functions
+app.use("/", rootRouter); // Use root path for Express routes
 
 module.exports.handler = serverless(app);
 

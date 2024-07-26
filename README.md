@@ -15,6 +15,9 @@ https://github.com/safak/youtube/tree/html-css-js-ecommerce
 
 # How to start this program
 To setup this project, you have to follow these simple steps. The required code to start the project is node.js and npm.
+- Fork this repo
+- create a new folder on your PC, go to the terminal, using git clone XXXXXX(link to your repo)
+- using code . or open the project in your prefered IDE
 - cd to backend folder
 - Run the `npm install` command to install all of the dependencies.
 - Run the `npm start` command to run the server or npm test to test the code.

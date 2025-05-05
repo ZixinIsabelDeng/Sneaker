@@ -1,8 +1,6 @@
 # Contributor: 
-- Camila (Front-end design for login/logout/signin.html and css)
-- Zhihao (bugfixing: make sure js sending the data to backend for login/signin page)
 - Xu Ke: adding routers for post methods of signin/signout/login/valid, adding database, documentation and setup config
-- Zixin : adding the rest of the routers, error.html, reorgnize file structure, documentation and adding js for logical display
+- Zixin : adding the rest of the routers, error.html, reorgnize file structure, documentation and adding js for logical display, Front-end design for login/logout/signin.html and css
 
 # For Maintanance:
 - please fork this repository and create your own branch.
